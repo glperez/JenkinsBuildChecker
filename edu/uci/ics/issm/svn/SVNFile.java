@@ -1,17 +1,24 @@
-package edu.uci.ics.issm.jenkins;
+package edu.uci.ics.issm.svn;
 
-public class SVNFile extends MyFile
+public class SVNFile
 {
+	protected String fileName;
 	protected String filePath;
-	protected char modType;
 	
-	public SVNFile(String filePath, String fileName, char modType)
+	public SVNFile(String filePath, String fileName)
 	{
-		super(fileName);
+		this.fileName = fileName;
 		this.filePath = filePath;
-		this.modType = modType;
+	}
+	public String getFileName()
+	{
+		return fileName;
 	}
 
+	public void setFileName(String fileName)
+	{
+		this.fileName = fileName;
+	}
 	public String getFilePath()
 	{
 		return filePath;
@@ -22,18 +29,9 @@ public class SVNFile extends MyFile
 		this.filePath = path;
 	}
 
-	public char getModType()
-	{
-		return modType;
-	}
-
-	public void setModType(char modType)
-	{
-		this.modType = modType;
-	}
 	public String toString()
 	{
-		return this.modType + " " + this.filePath + this.getFileName();
+		return this.filePath + this.getFileName();
 	}
 	public int compareTo(SVNFile that)
 	{

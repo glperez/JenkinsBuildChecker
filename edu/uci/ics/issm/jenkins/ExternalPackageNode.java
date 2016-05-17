@@ -1,6 +1,8 @@
 package edu.uci.ics.issm.jenkins;
 import java.util.ArrayList;
 
+import edu.uci.ics.issm.svn.ExternalPackage;
+
 public class ExternalPackageNode implements Comparable
 {
 	private ExternalPackage p;

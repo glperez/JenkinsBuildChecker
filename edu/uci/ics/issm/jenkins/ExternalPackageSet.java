@@ -4,6 +4,8 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+import edu.uci.ics.issm.svn.ExternalPackage;
+
 public class ExternalPackageSet extends HashSet<ExternalPackageNode>
 {
 
